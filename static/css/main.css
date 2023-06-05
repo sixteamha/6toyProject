@@ -1,0 +1,72 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+:root {
+  --baseColor: #eee;
+  --headerFontSize: 2.2rem;
+  --baseFontFamily: "Open Sans", sans-serif;
+}
+
+.header {
+  inline-size: 100%;
+}
+
+.header > .bg-header {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/mainBackground.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: grid;
+  place-items: center start;
+  place-items: center;
+}
+
+.bg-header > .sun {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #faf082;
+}
+.bg-header > .moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+}
+.bg-header > .earth {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #0067a3;
+  position: absolute;
+}
+
+.bg-header > button {
+  width: 300px;
+  height: 80px;
+  font-family: var(--baseFontFamily);
+  font-size: var(--headerFontSize);
+  color: var(--baseColor);
+  background-color: transparent;
+  border: none;
+  animation: ani 1s infinite alternate;
+  transition: all 0.3s;
+}
+.bg-header > button:hover {
+  color: #fff;
+}
+@keyframes ani {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
