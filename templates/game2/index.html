@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <style>
     #body,
@@ -14,12 +15,40 @@
     }
     #cont {
       width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
     }
   </style>
   <body>
     <div id="cont">
-      <div id="card-cont"></div>
+      <form id="game-form">
+        <div id="card-select-div">
+          <label for="card-number">카드 개수 :</label>
+          <input
+            type="number"
+            id="card-number"
+            name="card-number"
+            min="2"
+            step="2"
+          />
+        </div>
+        <div id="player-select-div">
+          <label for="player-number">플레이어 수 :</label>
+          <input
+            type="number"
+            id="player-number"
+            name="player-number"
+            min="2"
+          />
+        </div>
+        <div id="startGame-submit">
+          <input type="submit" value="Start Game" />
+        </div>
+      </form>
     </div>
-    <script src="index.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
