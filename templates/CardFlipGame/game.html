@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../CardFlipGame/css/style.css"
+      type="text/css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Gamja Flower", cursive;
+      /* background-color: aqua; */
+    }
+
+    #cards-container {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      padding: 10px;
+      flex-wrap: wrap;
+      /* filter: blur(10px); */
+    }
+
+    .card-box {
+      width: 25%;
+      max-width: 25%;
+      height: 17vh;
+      padding: 5px 2px;
+      perspective: 1000px;
+    }
+
+    #card-box:hover #card {
+      transform: rotateY(180deg);
+    }
+    #card {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.13);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.1);
+      border-radius: 15px;
+      transform: rotateY(0deg);
+      transition: transform 0.2s;
+      transform-style: preserve-3d;
+    }
+    #card:disabled {
+      transform: rotateY(180deg);
+    }
+    #card-front {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      backface-visibility: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(../../static/img/cardImage.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
+    #card-back {
+      backface-visibility: hidden;
+      border-radius: 15px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: #fff;
+      overflow: hidden;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotateY(180deg);
+    }
+    .card-title {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      text-align: center;
+    }
+    #players-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      background-color: rgba(45, 255, 255, 0.467);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.1);
+    }
+    #players-Text {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Gamja Flower", cursive;
+    }
+    #players-Text > h2 {
+      text-align: center;
+      line-height: 20px;
+      font-family: "Gamja Flower", cursive;
+    }
+    #players-winlose-container {
+      display: flex;
+    }
+    #players-success-container,
+    #players-loser-container {
+      width: 50%;
+      display: flex;
+      margin: 15px 0;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #players-success,
+    #players-Loser {
+      width: 100%;
+      font-size: 2rem;
+      /* background-color: red; */
+      text-align: center;
+    }
+    #players-Loser {
+      color: red;
+    }
+    #players-Loser::after {
+      content: "😵";
+    }
+    #players-success::after {
+      content: "😃";
+    }
+    #allFlip-Button,
+    #back-Button,
+    #retry-Button {
+      border: none;
+      background-color: transparent;
+      width: 100px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 10px;
+      font-size: 1.2rem;
+      font-family: "Gamja Flower", cursive;
+    }
+    .winner-player,
+    .Loser-player {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+    #header-menu {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: 800px) {
+      #cards-container,
+      #player-container {
+        width: 100%;
+      }
+      .card-box {
+        height: 15vh;
+      }
+      .winner-player,
+      .Loser-player {
+        width: 33%;
+        font-size: 13px;
+      }
+      #allFlip-Button,
+      #back-Button,
+      #retry-Button {
+        width: 60px;
+      }
+    }
+  </style>
+  <body>
+    <header id="header-menu">
+      <button id="back-Button">뒤로가기</button>
+      <button id="allFlip-Button">뒤집기</button>
+      <button id="retry-Button">리트</button>
+    </header>
+    <div id="cards-container"></div>
+    <div id="players-container">
+      <div id="players-Text">
+        <h2>플레이어1</h2>
+        의 차례입니다
+      </div>
+    </div>
+    <div id="players-winlose-container">
+      <div id="players-success-container">
+        <div id="players-success">Winner</div>
+      </div>
+      <div id="players-loser-container">
+        <div id="players-Loser">Loser</div>
+      </div>
+    </div>
+  </body>
+  <script src="js/game.js"></script>
+</html>
