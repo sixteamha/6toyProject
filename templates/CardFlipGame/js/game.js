@@ -15,6 +15,8 @@ function Player(name) {
   this.turn = false;
 }
 
+{
+}
 const GameStart = () => {
   //로컬스토리지에서 플레이어숫자를 받아옴
   let numPlayers = localStorage.getItem("playerNumber");
@@ -91,7 +93,36 @@ gameCard.forEach((card) => {
       </div>
     `;
   document.getElementById("cards-container").appendChild(cardItem);
+
   cardItemsEl.push(cardItem);
+  switch (gameCard.length) {
+    case 24:
+      cardItem.style.height = "12.5vh";
+      cardItem.style.width = "16.5%";
+
+      break;
+
+    case 20:
+      cardItem.style.height = "12.5vh";
+      cardItem.style.width = "20%";
+
+      break;
+
+    case 16:
+      cardItem.style.height = "12.5vh";
+      cardItem.style.width = "25%";
+
+      break;
+
+    case 12:
+      cardItem.style.height = "17.5vh";
+      cardItem.style.width = "25%";
+
+      break;
+
+    default:
+      break;
+  }
   //카드클릭 이벤트 함수 ///
   const cardClickHandler = (e) => {
     /// 빠르게 카드 뒤집거나 똑같은 카드누르면 실행 하지못하도록 ///
@@ -130,6 +161,7 @@ gameCard.forEach((card) => {
   /// for문 이벤트 선언 ///
   cardItem.addEventListener("click", cardClickHandler);
 });
+
 const allCardFlip = () => {
   if (lock | (flippedCards.length > 0)) return;
   lock = true;
@@ -167,6 +199,24 @@ const cardCollect = (e) => {
  * @returns 2. 플레이어의 카드 두개가 맞으면 제외
  * @returns 3. 차례변경
  */
+
+const cardexample = () => {
+  document.getElementById("cards-container").replaceChildren();
+  for (let i = 0; i < CardsCount; i++) {
+    let cardItem = document.createElement("div");
+
+    cardItem.className = "card-box";
+    cardItem.innerHTML = `
+          <div id="card">
+              <div id="card-front">
+              
+              </div>
+          </div>
+        `;
+    document.getElementById("cards-container").appendChild(cardItem);
+  }
+};
+
 const nextTurn = () => {
   // 현재 플레이어 찾기
   let currentPlayerIndex = players.findIndex((player) => player.turn === true);
