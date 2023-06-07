@@ -28,8 +28,8 @@ body {
 }
 
 .bg-header > .sun {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: #faf082;
 }
@@ -41,8 +41,8 @@ body {
   position: absolute;
 }
 .bg-header > .earth {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #0067a3;
   position: absolute;
