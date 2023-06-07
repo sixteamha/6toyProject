@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.exp-background {
+  background-image: url("../../img/mainBackground.png");
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.exp-background .exp-container {
+  position: relative;
+  width: 80vw;
+  height: 75vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-background .title-box {
+  height: 10vh;
+}
+
+.exp-background .title-box > h1 {
+  font-size: 8vh;
+  color: white;
+}
+
+.exp-background .content-box {
+  height: 50vh;
+  font-size: 2.5vw;
+  padding: 3vh 0;
+  color: #e6e6e6;
+  margin: 2.5vh 0;
+}
+.exp-background .content-box > ol {
+}
+.exp-background .content-box > ol > li {
+  list-style-type: decimal;
+  margin: 0 0 3vh 0;
+}
+
+.exp-background .btn-box {
+  height: 10vh;
+  justify-content: right;
+}
+
+.exp-background .btn-box > button {
+  all: unset;
+  font-size: 4vh;
+
+  position: absolute;
+  right: 0;
+  color: white;
+
+  padding: 10px;
+  text-shadow: 10px 10px 10px black;
+}
+
+.exp-background .btn-box > button:hover {
+  cursor: pointer;
+}
