@@ -1,102 +1,89 @@
-/* 기본 환경 설정 */
 @import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
-
 :root {
   --baseColor: #333d51;
-  --baseFontColor: #fff;
 }
-/* 환경 설정 */
+
 html,
 body {
   padding: 0;
-  border: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
   background-color: var(--baseColor);
 }
 
+:root {
+  --headerColor: #666;
+  --headerFontSize: 1rem;
+}
+
 * {
   font-family: "Gugi", cursive;
 }
+/* gnb 영역 디자인 */
 
-img {
+.header {
   width: 100%;
-  height: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  font-size: var(--headerFontSize);
 }
 
-/* main 영역 디자인 설계 */
+.header > .title-box {
+  display: none;
+}
 
+.header > .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 0 18px;
+  box-sizing: border-box;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: var(--headerColor);
+}
+
+.nav-link > a:hover,
+.nav-link > a:focus {
+  color: #fff;
+}
+
+/* main 영역 디자인 */
 .container {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.container > .title-box {
-  margin: 10px 0 10px 0;
-  padding: 0;
-  color: var(--baseFontColor);
-  font-size: 2.2rem;
-  animation: ani 1s infinite alternate;
-}
-
-.container > .title-box > span {
-  color: #faf082;
-  font-size: 40px;
-}
-
-@keyframes ani {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, 10px);
-  }
-}
-
-.container > .img-box {
-  width: 350px;
-  height: 350px;
-}
-
-/* form 디자인 설계 */
-
-#enter-form {
-  text-align: center;
-  margin: 10px 0 10px 0;
-  line-height: 50px;
-}
-#enter-form > .input-box {
-  width: 250px;
-  height: 50px;
-}
-#enter-form > .input-box > input[type="text"] {
-  width: 100%;
-  height: 100%;
+#exp-form {
+  color: #fff;
   border: 2px solid #333;
-  outline: 0;
   padding: 15px;
   margin: 0;
-  box-sizing: border-box;
-  border-radius: 15px;
-  font-size: 1.8rem;
   background-color: #3b4148;
-  color: #fff;
 }
 
-#enter-form > .input-box > input[type="text"]:hover {
-  background-color: #434a52;
+#exp-form > p {
+  font-size: 1rem;
 }
 
-input[type="submit"] {
-  background-color: transparent;
-  font-size: 2.2rem;
-  color: var(--baseFontColor);
-  border: none;
-  padding: 0;
-  margin-top: 30px;
-  /* animation: ani 1s infinite alternate; */
+#exp-form > p > span {
+  font-size: 1.2rem;
+  color: #faf082;
+}
+
+@media screen and (min-width: 1025px) {
+  #exp-form > p {
+    font-size: 1.8rem;
+  }
+  #exp-form > p > span {
+    font-size: 2.2rem;
+  }
 }

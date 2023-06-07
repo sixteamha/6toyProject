@@ -7,8 +7,12 @@ root = Blueprint('root', __name__)
 def main():
     return render_template('index.html')
 
-@root.route('/WordFindGame/exp',methods=['GET'])
+@root.route('/WordFindGame/main',methods=['GET'])
 def gameMainGetMethod():
+    return render_template('./WordFindGame/main.html')
+
+@root.route('/WordFindGame/exp',methods=['GET'])
+def gameExpGetMethod():
     return render_template('./WordFindGame/exp.html')
 
 @root.route('/WordFindGame/game',methods=['GET'])
@@ -27,6 +31,7 @@ def gameApiPostMethod():
     # if input data is correct handler
     try:
         data = json.loads(response.content)
+        print(data)
         return jsonify({"status" : "success"})
     # if input data is not correct handler
     except:

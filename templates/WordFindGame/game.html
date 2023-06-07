@@ -21,19 +21,39 @@
     ></script>
     <script defer src="../../static/js/WordFindGame/game.js"></script>
     <script defer src="../../static/js/WordFindGame/animate.js"></script>
+    <script>
+      var time = 10;
+      var sec = "";
+      setInterval(() => {
+        sec = time % 60;
+        document.getElementById("time-box").innerHTML = sec + "초";
+        time--;
+        if (time === 5) document.getElementById("time-box").style.color = "red";
+        if (time === 0) return showGameOverEventHandler();
+
+        // update time to LocalStorage
+        localStorage.setItem("time", time);
+      }, 1000);
+
+      function setTimer() {
+        //reset timer to 5sec in LocalStorage
+        time = 10;
+      }
+    </script>
   </head>
   <body>
     <div class="header">
       <nav class="nav">
-        <div class="nav-link"><a href="/WordFindGame/exp">이전</a></div>
+        <div class="nav-link"><a href="/WordFindGame/main">이전</a></div>
         <div class="nav-link"><a href="/">홈</a></div>
       </nav>
       <div class="title-box">초성 맞추기 <span>게임</span></div>
     </div>
     <div class="container">
+      <div id="time-box"></div>
       <div class="letter-form">
         <div class="letters">
-          <span id="letter-title">ㅇㄱㅇ</span>
+          <span id="letter-title"></span>
           <div class="img-box"></div>
         </div>
         <div class="send-box">
@@ -45,7 +65,12 @@
               autocomplete="off"
               required
             />
-            <input type="submit" id="submit-btn" value="&#xf002;" />
+            <input
+              type="submit"
+              id="submit-btn"
+              value="&#xf002;"
+              onclick="setTimer()"
+            />
           </form>
         </div>
       </div>
@@ -60,6 +85,5 @@
         <img src="../../static/img/우주인11.png" />
       </div>
     </div>
-    <div class="footer"></div>
   </body>
 </html>
