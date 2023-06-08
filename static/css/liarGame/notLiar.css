@@ -160,3 +160,27 @@
     transform: translate(0, 10px);
   }
 }
+
+@media (width<380px) {
+  .notLiar-background .notLiar-container {
+    position: relative;
+    width: 80%;
+    height: 550px;
+  }
+
+  .notLiar-background .subTitle-box > h2 {
+    color: white;
+    font-size: 25px;
+  }
+  .notLiar-background .content {
+    top: 20px;
+    right: -30px;
+  }
+  .notLiar-background .horse {
+    font-size: 25px;
+    top: 50px;
+  }
+  .notLiar-background .horse-short {
+    top: 45px;
+  }
+}

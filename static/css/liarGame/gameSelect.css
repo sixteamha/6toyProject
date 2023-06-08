@@ -115,3 +115,13 @@
     transform: translate(0, 20px);
   }
 }
+
+@media (width<380px) {
+  .gameSelect-background button {
+    color: white;
+    font-size: 3vh;
+  }
+  .gameSelect-background .subTitle-box > h2 {
+    font-size: 25px;
+  }
+}

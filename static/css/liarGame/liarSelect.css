@@ -32,7 +32,7 @@
 }
 
 .liarSelect-background .subTitle-box {
-  height: 30vh;
+  height: 40vh;
 
   animation: rotate_image 15s linear infinite;
   transform-origin: 50% 50%;
@@ -106,5 +106,15 @@
 
   40% {
     transform: scale(1.15) rotate(0);
+  }
+}
+
+@media (width<380px) {
+  .liarSelect-background .Title-box h2 {
+    font-size: 5vw;
+  }
+
+  .liarSelect-background .subTitle-box h3 {
+    font-size: 3vw;
   }
 }

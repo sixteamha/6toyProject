@@ -152,3 +152,15 @@
     transform: translate(0, 10px);
   }
 }
+@media (width<380px) {
+  .answer-background .answer-container {
+    width: 250px;
+    height: 60vh;
+  }
+  .answer-background .horse {
+    top: 40px;
+  }
+  .answer-background .horse-short {
+    top: 35px;
+  }
+}

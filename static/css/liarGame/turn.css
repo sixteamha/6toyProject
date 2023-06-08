@@ -96,3 +96,12 @@
     transform: scale(1.15) rotate(0);
   }
 }
+@media (width<380px) {
+  .turn-background .subTitle-box h2 {
+    font-size: 5vw;
+  }
+
+  .turn-background .subTitle-box h3 {
+    font-size: 3vw;
+  }
+}

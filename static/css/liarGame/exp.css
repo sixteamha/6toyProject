@@ -25,6 +25,7 @@
 
 .exp-background .title-box {
   height: 10vh;
+  margin-bottom: 60px;
 }
 
 .exp-background .title-box > h1 {
@@ -39,11 +40,9 @@
   color: #e6e6e6;
   margin: 2.5vh 0;
 }
-.exp-background .content-box > ol {
-}
 .exp-background .content-box > ol > li {
   list-style-type: decimal;
-  margin: 0 0 3vh 0;
+  margin: 0 0 2.8vh 0;
 }
 
 .exp-background .btn-box {
@@ -65,4 +64,14 @@
 
 .exp-background .btn-box > button:hover {
   cursor: pointer;
+}
+
+@media (width<380px) {
+  .exp-background .title-box {
+    margin-bottom: 100px;
+  }
+
+  .exp-background .title-box > h1 {
+    font-size: 20px;
+  }
 }
