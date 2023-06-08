@@ -1,0 +1,8 @@
+@media screen and (max-width:550px){
+.baskin-main>h1{font-size:40px;}
+.baskin-main>.name>strong{font-size:40px;}
+.baskin-main>p{font-size:20px;margin-top:20px;}
+.baskin-main>.astro{transform:translateX(0)rotate(30deg) translateY(5px);}
+.wrap>.buttons>button{width: 115px; height: 57px;font-size:20px;}
+.wrap>.buttons{margin-left:20px;}
+}

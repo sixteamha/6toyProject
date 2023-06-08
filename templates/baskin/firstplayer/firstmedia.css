@@ -1,0 +1,18 @@
+@media screen and (max-width:550px){
+ .firstwrap>h4{font-size:21px;margin-top:20px;}
+ .firstwrap>.astro{width: 75vw; height: 45vh;}
+ .firstwrap>.astro>img{width:100%;height:90%;}
+ .firstwrap>.first-number{width:75%;text-align:center;}
+ .firstwrap>.first-member{width:70%;}
+ .firstwrap>.first-member>.button{width:30vw;}
+ .firstwrap>.mo-btn>button {
+   color: #ffffff;
+   font-size: 18px;
+   justify-content: center;
+  }
+ 
+   .firstwrap>.mo-btn>button i {
+   margin-right: 5px;
+   font-size: 18px;
+  }
+}

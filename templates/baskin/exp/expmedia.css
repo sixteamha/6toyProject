@@ -1,0 +1,60 @@
+@media screen and (max-width:400px){
+ body>.howto-wrap>.howto {width:83%;height:80%;margin-top:0;}
+  .howto-wrap>.howto>h4{font-size:37px;}
+  .howto-wrap>.howto strong{font-size:37px;}
+ .howto-wrap>.howto>p{font-size:23px;}
+ .howto-wrap>.howto span{font-size:23px;}
+  .howto-wrap>.astro{display:none;}
+.howto-wrap>.mo-btn {
+  display: flex;
+  color: #ffffff;
+  font-size: 23px;
+  align-items: center;
+justify-content: space-evenly;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+.howto-wrap>.mo-btn>button{color:#ffffff;font-size:18px;justify-content: center;}
+.howto-wrap>.mo-btn>button i {
+  margin-right: 5px; font-size:18px;
+}
+}
+@media screen and (min-width:401px) and  (max-width:600px){
+ body>.howto-wrap>.howto {
+   width: 75%;
+   height: 80%;
+   margin-top: 30px;
+  }
+ 
+  .howto-wrap>.howto>h4 {
+   font-size: 35px;
+  }
+ 
+  .howto-wrap>.howto strong {
+   font-size: 35px;
+  }
+ 
+  .howto-wrap>.howto>p {
+   font-size: 25px;
+  }
+ 
+  .howto-wrap>.howto span {
+   font-size: 25px;
+  }
+ .howto-wrap>.astro {
+  display: block;width:100%;
+ }
+ .howto-wrap>.astro img{width:90%;height:90%;}
+.howto-wrap>.mo-btn>button {
+  color: #ffffff;
+  font-size: 18px;
+  justify-content: center;
+  margin-top:20px;
+}
+
+.howto-wrap>.mo-btn>button i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+}

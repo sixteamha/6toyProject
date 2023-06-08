@@ -1,0 +1,10 @@
+@media screen and (max-width:550px) {
+ .ingwrap>.ings .astro {
+   width: 60vw;
+   height: 45vh;
+  }
+  .ingwrap>.ings>.ing>h4{
+    font-size: 28px; margin-right: 10px;
+    margin-top: 10px;
+  }
+}

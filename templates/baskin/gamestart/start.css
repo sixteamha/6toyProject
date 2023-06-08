@@ -1,0 +1,79 @@
+ @charset "utf-8"
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 15px;
+   list-style: none;
+   text-decoration: none;
+ }
+
+  .start-wrap>.mo-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+  }
+
+  .start-wrap>.mo-btn>a {
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+ .start-wrap>.mo-btn>a i{font-size:25px;}
+
+
+ /* 베스킨 라빈스 31 게임 스타트 글씨 */
+  .start-wrap{max-width: 1920px;height:100vh;margin: auto; display: flex; flex-direction: column; align-items: center; justify-content: center;background: linear-gradient(to bottom, #333d51, #01031f);}
+  .start-wrap>.start-name{color: #ffffff; width: 100%; height: 15vh; display: flex; flex-direction: column;
+    text-align: center;}
+  .start-wrap>.start-name>em {
+    font-size: 30px;color:#fca103;margin-top:15px;
+  }
+  .start-wrap>.start-name>h4 {
+    font-size: 60px;
+    margin-top: 10px;
+  }
+/* 베스킨 라빈스 31 게임 우주복 이미지 */
+  .start-wrap>.astro{width: 35vw; height: 60vh; margin-left: 20px;}
+ .start-wrap>.astro>img{width:100%;height:100%;}
+
+/* 베스킨 라빈스 31 게임 숫자 이미지 */
+  .start-wrap>.number-choice{width:50%;height:50%;display:flex;flex-direction: column;align-items:center;justify-content: center;margin-left:30px;}
+ .start-wrap>.number-choice>p{font-size:20px;color:#ffffff;margin-bottom:20px;}
+ .start-wrap>.number-choice>.numbers{
+ display:flex;}
+.start-wrap>.number-choice>.numbers input{width: 80px; height: 50px; margin-right: 20px; font-size: 30px;
+  text-align: center; border-radius: 5px; background: transparent; color: #ffffff; border: 1px solid #ffffff;}
+.start-wrap>.number-choice>.buttons{display:flex;text-align: center;}
+.start-wrap>.number-choice>.buttons>a{border: 1px solid #01031f; width: 150px; height: 50px;
+  font-size: 30px; border-radius: 30px; margin-top: 30px;background: #fca103; color: #ffffff;
+  font-weight: 500; margin-right: 10px;}
+.start-wrap>.number-choice>.buttons>a{
+  border:1px solid #01031f;width:150px;
+  height:50px;font-size:30px;border-radius:30px;margin-top:30px;background:#fca103;color:#ffffff;font-weight:500;margin-right:10px;}
+
+.start-wrap>.number-choice>.buttons>button {
+  border: 1px solid #01031f;
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 30px;
+  margin-top: 30px;
+  background: #fca103;
+  color: #ffffff;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+  .start-wrap>.number-choice>.mobile{display:none;}
+
+/* *****************숫자보이게 하기 위함********************* */
+.start-wrap>.last{color:#ffffff;font-size:50px;margin-bottom:20px;}

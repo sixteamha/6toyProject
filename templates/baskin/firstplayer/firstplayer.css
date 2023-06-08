@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Josefin+Sans&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;font-family: 'Gugi', cursive;
+ font-family: 'Josefin Sans', sans-serif;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-size: 15px;
+ list-style: none;
+ text-decoration: none;
+}
+
+.color-bg {
+ background: linear-gradient(to bottom, #333d51, #01031f);
+}
+
+body>.firstwrap {
+ max-width: 1920px;
+ height: 100vh;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+/* 플레이어 환영 전 이전,다음 */
+.firstwrap>.mo-btn {
+ display: flex;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 3vh;
+}
+
+.firstwrap>.mo-btn>button {
+ background: transparent;
+ border: none;
+ color: #ffffff;
+ font-size: 30px;
+}
+
+.firstwrap>.mo-btn>button i {
+ font-size: 25px;
+}
+
+
+
+/* 플레이어 환영 글씨 및 우주복 그림 */
+.firstwrap>h4{color:#ffffff;font-size:60px;margin-top:12px;}
+.firstwrap>.astro{width:35vw;height:45vh;}
+.firstwrap>.astro>img{width:100%;height:100%;}
+
+
+/* 플레이어 숫자입력 */
+.firstwrap>.first-number{width:40%; height: auto;
+ flex-flow: column; display: flex; justify-content: center; align-items: center;}
+.firstwrap>.first-number>p{font-size:30px;color:#ffffff;margin-bottom:15px;}
+.firstwrap>.first-number>input{width: 160px; height: 75px; text-align: center;border:none;margin-top:10px;background-color:transparent;border:2px solid #ffffff;border-radius:20px;color:#ffffff;font-size:30px;margin-bottom:10px;}
+.firstwrap>.first-number>input:hover{border:2px solid #ffffff;}
+
+
+/* 플레이어 인원선택 */
+.firstwrap>.first-member{width:35%;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;position:relative;}
+.firstwrap>.first-member>p{color: #ffffff;font-size: 25px; margin-bottom: 20px;}
+.firstwrap>.first-member .fa-solid{font-size:30px;color:#ffffff;}
+.firstwrap>.first-member>.button{display:flex; align-content: center;
+ justify-content: space-between; align-items: center;width: 10vw;}
+.firstwrap>.first-member .arrow{background:transparent;border:none;}
+.firstwrap>.first-member .number{color:#ffffff;font-size:2.5rem;}
+
+.firstwrap>.startbutton{display:flex;}
+.firstwrap>.startbutton>button {
+ background: #fca103;
+ color: #ffffff;
+ border: #fca103;
+ border-radius: 10px;
+ width: 120px;
+ height: 50px;
+ font-size: 30px;
+ margin: 16px 40px 10px 36px;
+}

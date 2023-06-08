@@ -1,0 +1,10 @@
+@media screen and (max-width:550px) {
+ .failwrap>.fails .astro {
+   width: 60vw;
+   height: 45vh;
+  }
+  .failwrap>.fails>.fail>h4{
+    font-size: 28px; margin-right: 10px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try again</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="fail.css"/>
+    <link rel="stylesheet" href="failmedia.css" />
+  </head>
+  <body>
+    <div class="failwrap color-bg">
+      <div class="fails">
+        <div class="fail">
+          <p>마지막 숫자를 입력하셨습니다.</p>
+          <h4>다음 기회에 참여해주세요!</h4>
+          <div id="failuser"></div>
+        </div>
+        <div class="astro">
+          <img src="fail.png" alt="" />
+        </div>
+      </div>
+
+      <div class="reset">
+        <button type="button">돌아가기</button>
+      </div>
+    </div>
+    <script>
+      let fail=window.location.search
+      let params= new URLSearchParams(fail)
+      let loser= params.get("loser")
+      document.getElementById("failuser").innerHTML=loser
+    </script>
+  </body>
+</html>
