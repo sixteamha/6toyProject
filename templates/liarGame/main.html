@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/reset.css" />
+    <link rel="stylesheet" href="../../static/css/liarGame/main.css" />
+    <title>Liar Game</title>
+    <script>
+      window.localStorage.setItem("numbers", [3, 4, 5, 6, 7]);
+      window.localStorage.setItem("kind", [
+        "과일",
+        "인물",
+        "동물",
+        "음료",
+        "직업",
+      ]);
+      window.localStorage.setItem("num", 0);
+    </script>
+  </head>
+  <body>
+    <div class="main-background">
+      <div class="main-container">
+        <div class="title-box">
+          <h1>Liar Game</h1>
+        </div>
+        <div class="img1"><div class="img2"></div></div>
+        <div class="btn-box">
+          <button onclick="location.href='/'">메인으로 이동</button>
+          <button onclick="location.href='exp'">설명서</button>
+          <button onclick="location.href='gameSelect?choice=num'">
+            Game Start
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

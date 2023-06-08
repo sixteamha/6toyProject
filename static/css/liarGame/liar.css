@@ -1,0 +1,130 @@
+.liar-background {
+  background: linear-gradient(to bottom, #333d51, #01031f);
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.liar-background .liar-container {
+  width: 60vw;
+  height: 85vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.liar-background .subTitle-box {
+  height: 5vh;
+}
+.liar-background .subTitle-box > h2 {
+  color: white;
+  font-size: 4vw;
+}
+.liar-background .img1 {
+  width: 60vw;
+  height: 55vh;
+
+  background-image: url("../../img/행성들3.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation: ani 1s infinite alternate;
+  transition: all 0.3s;
+}
+.liar-background .img2 {
+  width: 60vw;
+  height: 40vh;
+
+  position: fixed;
+
+  background-image: url("../../img/우주인2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation: ani 1s infinite alternate;
+  transition: all 0.3s;
+}
+.liar-background .btn-box {
+  height: 10vh;
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.liar-background button {
+  all: unset;
+  font-size: 3vw;
+  margin-top: 5vh;
+
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+
+  background-color: #fafafa;
+  color: #000000;
+
+  /* animation: jittery 4s infinite; */
+}
+.liar-background .btn-box button:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@keyframes jittery {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+@keyframes ani {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
