@@ -70,11 +70,11 @@ const playerText = () => {
 };
 
 document.getElementById("back-Button").addEventListener("click", () => {
-  window.location.href = "./main.html";
+  window.location.href = "/CardFilpCame/main";
 });
 
 document.getElementById("retry-Button").addEventListener("click", () => {
-  window.location.href = "";
+  window.location.reload();
 });
 /// 카드생성 ///
 gameCard.forEach((card) => {

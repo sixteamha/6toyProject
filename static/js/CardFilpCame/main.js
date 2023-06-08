@@ -7,11 +7,11 @@ document.getElementById("game-start-btn").addEventListener("click", (event) => {
   const playerNumber = document.getElementById("result-person").innerText;
   localStorage.setItem("cardNumber", cardNumber);
   localStorage.setItem("playerNumber", playerNumber);
-  window.location.href = "game.html";
+  window.location.href = "/CardFilpCame/game";
 });
 
 document.getElementById("game-back-btn").addEventListener("click", () => {
-  window.location.href = "start.html";
+  window.location.href = "/CardFilpCame/start";
 });
 const cardexample = () => {
   document.getElementById("cards-container").replaceChildren();

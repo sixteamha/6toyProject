@@ -13,7 +13,7 @@
         answer = localStorage.getItem("answer");
         let temp_html = `<div class="horse">${answer}</div>
                         <div class="horse-short"></div>
-                        <img src="../../static/img/우주인3.png" />`;
+                        <img src="../../static/img/우주인8.png" />`;
         $(".img-box").append(temp_html);
       };
     </script>
@@ -24,7 +24,9 @@
         <div class="content-box">
           <div class="img-box"></div>
           <div class="btn-box">
-            <button onclick="location.href='main'">Play the game again</button>
+            <button onclick="window.location.href='/liarGame/main'">
+              Play the game again
+            </button>
           </div>
         </div>
       </div>

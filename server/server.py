@@ -7,6 +7,18 @@ root = Blueprint('root', __name__)
 def main():
     return render_template('index.html')
 
+@root.route('/WordFindGame/main',methods=['GET'])
+def gameWordGameMainGetMethod():
+    return render_template('./WordFindGame/main.html')
+
+@root.route('/WordFindGame/game',methods=['GET'])
+def gameWordFindGameGetMethod():
+    return render_template('./WordFindGame/game.html')
+
+@root.route('/WordFindGame/exp',methods=['GET'])
+def gameWordFindGameExpGetMethod():
+    return render_template('./WordFindGame/exp.html')
+
 @root.route('/liarGame/main',methods=['GET'])
 def gameMainGetMethod():
     return render_template('./liarGame/main.html')
@@ -46,6 +58,18 @@ def gameAnswerGetMethod():
 @root.route('/liarGame/api/answer',methods=['GET'])
 def gameApiAnswerGetMethod():
     return jsonify({"data":answer})
+
+@root.route('/CardFilpCame/start',methods=['GET'])
+def gameGardFilpCameStartMethod():
+    return render_template('./CardFilpCame/start.html')
+
+@root.route('/CardFilpCame/main',methods=['GET'])
+def gameGardFilpCameMainMethod():
+    return render_template('./CardFilpCame/main.html')
+@root.route('/CardFilpCame/game',methods=['GET'])
+def gameGardFilpCameGameMethod():
+    return render_template('./CardFilpCame/game.html')
+
 
 answer = {
     "과일": [

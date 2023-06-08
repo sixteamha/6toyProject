@@ -1,5 +1,5 @@
 document.getElementById("start").addEventListener("click", () => {
-  window.location.href = "main.html";
+  window.location.href = "/CardFilpCame/main";
 });
 
 const descriptionClickHandler = () => {
@@ -42,7 +42,7 @@ const refeshDescription = () => {
 };
 
 const MenuButton = () => {
-  window.location.href = "../../index.html";
+  window.location.href = "/";
 };
 document
   .getElementById("description")
