@@ -15,8 +15,6 @@ function Player(name) {
   this.turn = false;
 }
 
-{
-}
 const GameStart = () => {
   //로컬스토리지에서 플레이어숫자를 받아옴
   let numPlayers = localStorage.getItem("playerNumber");
@@ -41,7 +39,7 @@ const cardsCreate = () => {
   }
 };
 const playerSuccessList = (currentPlayer) => {
-  let winnerPlayer = document.createElement("h3");
+  let winnerPlayer = document.createElement("span");
   winnerPlayer.className = "winner-player";
   winnerPlayer.innerHTML = `${currentPlayer.name}`;
 
@@ -49,8 +47,9 @@ const playerSuccessList = (currentPlayer) => {
     .getElementById("players-success-container")
     .appendChild(winnerPlayer);
 };
+
 const playerLoserList = (currentPlayer) => {
-  let loserPlayer = document.createElement("h3");
+  let loserPlayer = document.createElement("span");
   loserPlayer.className = "Loser-player";
   loserPlayer.innerHTML = `${currentPlayer.name}`;
 
@@ -66,12 +65,12 @@ const playerText = () => {
   let currentPlayerIndex = players.findIndex((player) => player.turn === true);
   let currentPlayer = players[currentPlayerIndex];
   if (players.length <= 1 || !currentPlayer) return console.log("No players");
-  let innerText = `<h2> ${currentPlayer.name} </h2> 의 차례입니다`;
+  let innerText = `<span> ${currentPlayer.name} </span> 의 차례입니다`;
   return (document.getElementById("players-Text").innerHTML = innerText);
 };
 
 document.getElementById("back-Button").addEventListener("click", () => {
-  window.location.href = "./index.html";
+  window.location.href = "./main.html";
 });
 
 document.getElementById("retry-Button").addEventListener("click", () => {
@@ -87,7 +86,7 @@ gameCard.forEach((card) => {
           <div id="card-front">
           <div class="card-title"></div>
           </div>
-          <div id="card-back" style="background-image: url(../../static/img/우주인${card}.png);">
+          <div id="card-back" style="background-image: url(../../../static/img/우주인${card}.png);">
           <div class="card-title"><span></span> </div>
           </div>
       </div>
@@ -96,12 +95,6 @@ gameCard.forEach((card) => {
 
   cardItemsEl.push(cardItem);
   switch (gameCard.length) {
-    case 24:
-      cardItem.style.height = "12.5vh";
-      cardItem.style.width = "16.5%";
-
-      break;
-
     case 20:
       cardItem.style.height = "12.5vh";
       cardItem.style.width = "20%";
@@ -145,7 +138,6 @@ gameCard.forEach((card) => {
           nextTurn();
           playerText();
           choices = [];
-          console.log(collectCard);
           lock = false;
         }, 500);
       } else {
@@ -177,6 +169,7 @@ const allCardFlip = () => {
     }, 300);
   });
 };
+
 document
   .getElementById("allFlip-Button")
   .addEventListener("click", allCardFlip);

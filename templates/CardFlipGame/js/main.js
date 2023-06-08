@@ -27,13 +27,6 @@ const cardexample = () => {
     document.getElementById("cards-container").appendChild(cardItem);
     const cardBoxes = document.querySelectorAll(".card-box");
     switch (CardsCount) {
-      case 24:
-        cardBoxes.forEach((cardBox) => {
-          cardBox.style.height = "12.5vh";
-          cardBox.style.width = "16.5%";
-        });
-        break;
-
       case 20:
         cardBoxes.forEach((cardBox) => {
           cardBox.style.height = "12.5vh";
@@ -69,7 +62,7 @@ const count = (type, val) => {
   switch (val) {
     case "card":
       if (type === "plus") {
-        card >= 24 ? (card = parseInt(card)) : (card = parseInt(card) + 4);
+        card >= 20 ? (card = parseInt(card)) : (card = parseInt(card) + 4);
       } else if (type === "minus") {
         card <= 12 ? (card = parseInt(card)) : (card = parseInt(card) - 4);
       }
