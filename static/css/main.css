@@ -1,72 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+:root {
+  --baseColor: #fff;
+}
+
 html,
 body {
-  margin: 0;
   padding: 0;
-}
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-
-:root {
-  --baseColor: #eee;
-  --headerFontSize: 2.2rem;
-  --baseFontFamily: "Open Sans", sans-serif;
-}
-
-.header {
-  inline-size: 100%;
-}
-
-.header > .bg-header {
+  margin: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/mainBackground.png");
+  background-color: #01031f;
+}
+ul {
+  list-style: none;
+  line-height: 50px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+:root {
+  --headerColor: #666;
+  --headerFontSize: 1rem;
+}
+
+* {
+  font-family: "Gugi", cursive;
+}
+
+.satellites {
+  animation: rotate 25s linear infinite;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(340deg) perspective(750px) rotateY(0deg);
+  }
+  to {
+    transform: rotateZ(340deg) perspective(750px) rotateY(360deg);
+  }
+}
+
+.satellite {
+  position: absolute;
+  width: 50px;
+  transform: rotateY(calc(var(--i) * 1deg)) translateZ(30vw);
+  opacity: 0.3;
+}
+
+/* container 디자인 설계 */
+.container {
+  position: relative;
+}
+.container > .folder {
+  width: 120px;
+  cursor: move;
+}
+
+.container > .folder > .folder-card {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-image: url("../../static/img/foldeer.png");
   background-size: cover;
   background-position: center;
-  position: absolute;
-  display: grid;
-  place-items: center start;
-  place-items: center;
 }
-
-.bg-header > .sun {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #faf082;
-}
-.bg-header > .moon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: gray;
-  position: absolute;
-}
-.bg-header > .earth {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #0067a3;
-  position: absolute;
-}
-
-.bg-header > button {
-  width: 300px;
-  height: 80px;
-  font-family: var(--baseFontFamily);
-  font-size: var(--headerFontSize);
-  color: var(--baseColor);
-  background-color: transparent;
-  border: none;
-  animation: ani 1s infinite alternate;
-  transition: all 0.3s;
-}
-.bg-header > button:hover {
+.container > .folder > label {
   color: #fff;
 }
-@keyframes ani {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(0, 10px);
+
+.container > .modal {
+  width: 300px;
+  position: absolute;
+  background-color: ivory;
+  border: 5px solid #faf082;
+  cursor: move;
+}
+.modal > .top-box {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #faf082;
+}
+
+.modal > .top-box > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* footer 디자인 설계 */
+.footer {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+}
+.footer > .nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav > .nav-link {
+  width: 100px;
+  height: 50px;
+  padding-right: 15px;
+  border-right: 2px solid #333;
+}
+.nav > .nav-link > button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.nav > .nav-clock {
+  font-size: 1.8rem;
+  padding-left: 15px;
+  border-left: 2px solid #333;
+}
+@media (max-width: 800px) {
+  .satellites {
+    display: none;
   }
 }

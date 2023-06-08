@@ -63,6 +63,7 @@ body {
   align-items: center;
 }
 #exp-form {
+  text-align: center;
   color: #fff;
   border: 2px solid #333;
   padding: 15px;

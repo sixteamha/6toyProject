@@ -10,7 +10,8 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--baseColor);
+  /* background-color: var(--baseColor); */
+  background: linear-gradient(to bottom, #333d51, #01031f);
 }
 
 :root {
@@ -63,7 +64,7 @@ body {
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: grid;
   place-items: center;
   font-size: 3.4rem;

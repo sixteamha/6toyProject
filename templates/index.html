@@ -15,18 +15,174 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
-    <script defer src="../static/js/animate.js"></script>
+    <script defer src="../static/js/index.js"></script>
   </head>
   <body>
-    <div class="header">
-      <div class="bg-header">
-        <div class="sun"></div>
-        <div class="moon"></div>
-        <div class="earth"></div>
-        <button>About Us</button>
+    <div class="container">
+      <!-- 폴더 영역 -->
+      <div class="folder" id="folder1" onclick="showModalEventHandler('game1')">
+        <div class="folder-card"></div>
+        <label for="folder-card">초성맞추기 게임</label>
+      </div>
+      <div class="folder" id="folder2" onclick="showModalEventHandler('game2')">
+        <div class="folder-card"></div>
+        <label for="folder-card">카드맞추기 게임</label>
+      </div>
+      <div class="folder" id="folder3" onclick="showModalEventHandler('game3')">
+        <div class="folder-card"></div>
+        <label for="folder-card">베라 게임</label>
+      </div>
+      <div class="folder" id="folder4" onclick="showModalEventHandler('game4')">
+        <div class="folder-card"></div>
+        <label for="folder-card">라이어 게임</label>
+      </div>
+
+      <!-- 모달창 디자인 -->
+      <div id="game1" class="modal hide">
+        <div class="top-box">
+          <span onclick="deleteModalEventHandler('game1')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game2" class="modal hide">
+        <div class="top-box">
+          <span onclick="deleteModalEventHandler('game2')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game3" class="modal hide">
+        <div class="top-box">
+          <span onclick="deleteModalEventHandler('game3')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game4" class="modal hide">
+        <div class="top-box">
+          <span onclick="deleteModalEventHandler('game4')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div class="satellites">
+        <img
+          class="satellite"
+          style="--i: 0; top: 80px"
+          src="../../static/img/우주인.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 20; top: 30px"
+          src="../../static/img/우주인2.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 40; top: 120px"
+          src="../../static/img/우주인3.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 60; top: 70px"
+          src="../../static/img/우주인4.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 80; top: 10px"
+          src="../../static/img/우주인5.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 100; top: 90px"
+          src="../../static/img/우주인6.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 120; top: 40px"
+          src="../../static/img/우주인7.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 140; top: 30px"
+          src="../../static/img/우주인8.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 160; top: 20px"
+          src="../../static/img/우주인9.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 180; top: 90px"
+          src="../../static/img/우주인10.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 200; top: 110px"
+          src="../../static/img/우주인11.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 220; top: 20px"
+          src="../../static/img/우주인12.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 240; top: 70px"
+          src="../../static/img/우주인.png"
+        />
+        <img
+          class="satellite"
+          style="--i: 260; top: 80px"
+          src="../../static/img/우주인2.png"
+        />
+        <img
+          class="satellite"
+          style="—i: 280; top: 10px"
+          src="../../static/img/우주인3.png"
+        />
+        <img
+          class="satellite"
+          style="—i: 300; top: 20px"
+          src="../../static/img/우주인4.png"
+        />
+        <img
+          class="satellite"
+          style="—i: 320; top: 120px"
+          src="../../static/img/우주인5.png"
+        />
+        <div lass="satellite" style="—i: 320; top: 120px" id="sun"></div>
       </div>
     </div>
-    <div class="container"></div>
-    <div class="footer"></div>
+    <div class="footer">
+      <nav class="nav">
+        <div class="nav-link">
+          <button
+            onclick="document.location.href = 'https://github.com/sixteamha/6toyProject'"
+          >
+            About Us
+          </button>
+        </div>
+        <div class="nav-title">여기는 6조입니당!! ㅎㅎ</div>
+        <div class="nav-clock"></div>
+      </nav>
+    </div>
   </body>
 </html>

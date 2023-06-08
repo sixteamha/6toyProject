@@ -31,7 +31,6 @@ def gameApiPostMethod():
     # if input data is correct handler
     try:
         data = json.loads(response.content)
-        print(data)
         return jsonify({"status" : "success"})
     # if input data is not correct handler
     except:

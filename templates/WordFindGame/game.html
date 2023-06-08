@@ -29,6 +29,7 @@
         document.getElementById("time-box").innerHTML = sec + "초";
         time--;
         if (time === 5) document.getElementById("time-box").style.color = "red";
+        if (time >= 7) document.getElementById("time-box").style.color = "#000";
         if (time === 0) return showGameOverEventHandler();
 
         // update time to LocalStorage
