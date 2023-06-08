@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/start.css" />
+    <script
+      src="https://kit.fontawesome.com/2bf48a0102.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <div>
+        <div id="button-menu">
+          <button id="button-menu-button" onclick="MenuButton()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div id="Game-Label">카드 뒤집기 게임</div>
+        <div id="Character-Div"></div>
+        <div id="winnerText-h2"></div>
+        <div id="Card-Example-container">
+          <div class="card-box">
+            <div id="card">
+              <div id="card-front">
+                <div class="card-title"></div>
+              </div>
+              <div
+                id="card-back"
+                style="background-image: url(../../../static/img/우주인1.png)"
+              >
+                <div class="card-title"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-box">
+            <div id="card">
+              <div id="card-front">
+                <div class="card-title"></div>
+              </div>
+              <div
+                id="card-back"
+                style="background-image: url(../../../static/img/우주인1.png)"
+              >
+                <div class="card-title"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-box">
+            <div id="card">
+              <div id="card-front">
+                <div class="card-title"></div>
+              </div>
+              <div
+                id="card-back"
+                style="background-image: url(../../../static/img/우주인3.png)"
+              >
+                <div class="card-title"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-box">
+            <div id="card">
+              <div id="card-front">
+                <div class="card-title"></div>
+              </div>
+              <div
+                id="card-back"
+                style="background-image: url(../../../static/img/우주인3.png)"
+              >
+                <div class="card-title"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description-start-container">
+          <button id="description">설명보기</button>
+          <button id="start">시작하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/start.js"></script>
+</html>
