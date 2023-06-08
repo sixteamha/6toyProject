@@ -41,10 +41,11 @@
       <!-- 모달창 디자인 -->
       <div id="game1" class="modal hide">
         <div class="top-box">
+          <span>초성맞추기 게임</span>
           <span onclick="deleteModalEventHandler('game1')">X</span>
         </div>
         <ul class="content-box">
-          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li><a href="/WordFindGame/main">app.py</a></li>
           <li>templates</li>
           <li>venv</li>
           <li>server</li>
@@ -52,10 +53,11 @@
       </div>
       <div id="game2" class="modal hide">
         <div class="top-box">
+          <span>카트맞추기 게임</span>
           <span onclick="deleteModalEventHandler('game2')">X</span>
         </div>
         <ul class="content-box">
-          <li><a href="/CardFilpCame/start">python3 app.py</a></li>
+          <li><a href="/CardFilpCame/start">app.py</a></li>
           <li>templates</li>
           <li>venv</li>
           <li>server</li>
@@ -63,10 +65,11 @@
       </div>
       <div id="game3" class="modal hide">
         <div class="top-box">
+          <span>베라 게임</span>
           <span onclick="deleteModalEventHandler('game3')">X</span>
         </div>
         <ul class="content-box">
-          <li><a href="/WordFindGame/main">python3 app.py</a></li>
+          <li><a href="/WordFindGame/main">app.py</a></li>
           <li>templates</li>
           <li>venv</li>
           <li>server</li>
@@ -74,10 +77,11 @@
       </div>
       <div id="game4" class="modal hide">
         <div class="top-box">
+          <span>라이어 게임</span>
           <span onclick="deleteModalEventHandler('game4')">X</span>
         </div>
         <ul class="content-box">
-          <li><a href="/liarGame/main">python3 app.py</a></li>
+          <li><a href="/liarGame/main">app.py</a></li>
           <li>templates</li>
           <li>venv</li>
           <li>server</li>
@@ -86,7 +90,7 @@
       <div class="satellites">
         <figure
           class="satellite"
-          style="--i: 0; top: 80px; --backgroundColor: yellow"
+          style="--i: 0; top: 10px; --backgroundColor: yellow"
         >
           <img src="../../static/img/javascript.svg" />
         </figure>
@@ -98,42 +102,53 @@
         </figure>
         <figure
           class="satellite"
-          style="--i: 80; top: 80px; --backgroundColor: red"
+          style="--i: 80; top: 30px; --backgroundColor: red"
         >
           <img src="../../static/img/html5.svg" />
         </figure>
-        <img
+        <figure
           class="satellite"
-          style="--i: 120; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
-        <img
+          style="--i: 120; top: 40px; --backgroundColor: yellow"
+        >
+          <img src="../../static/img/python.svg" />
+        </figure>
+        <figure
           class="satellite"
-          style="--i: 160; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
-        <img
+          style="--i: 160; top: 60px; --backgroundColor: blue"
+        >
+          <img src="../../static/img/css3.svg" />
+        </figure>
+        <figure
           class="satellite"
-          style="--i: 200; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
-        <img
+          style="--i: 200; top: 30px; --backgroundColor: red"
+        >
+          <img src="../../static/img/javascript.svg" />
+        </figure>
+        <figure
           class="satellite"
-          style="--i: 240; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
-        <img
+          style="--i: 240; top: 70px; --backgroundColor: yellow"
+        >
+          <img src="../../static/img/css3.svg" />
+        </figure>
+        <figure
           class="satellite"
-          style="--i: 280; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
-        <img
+          style="--i: 280; top: 20px; --backgroundColor: blue"
+        >
+          <img src="../../static/img/python.svg" />
+        </figure>
+        <figure
           class="satellite"
-          style="--i: 320; top: 30px"
-          src="../../static/img/우주인2.png"
-        />
+          style="--i: 320; top: 30px; --backgroundColor: red"
+        >
+          <img src="../../static/img/javascript.svg" />
+        </figure>
 
-        <div lass="satellite" style="—i: 360; top: 120px" id="sun"></div>
+        <div
+          class="satellite"
+          style="--backgroundColor: #faf082"
+          id="sun"
+          style="animation: unset"
+        ></div>
       </div>
     </div>
     <div class="footer">
