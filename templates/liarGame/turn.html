@@ -6,21 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../static/css/reset.css" />
     <link rel="stylesheet" href="../../static/css/liarGame/turn.css" />
-    <title>Document</title>
+    <title>Liar Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      window.onload = function turnPageShow() {
+        const URLSearch = new URLSearchParams(location.search).get("turn");
+        console.log(URLSearch);
+        let temp_html = "";
+        if (URLSearch === "0") {
+          temp_html = `<div class="subTitle-box">
+                            <h2>라이어 게임 시작합니다</h2>
+                          </div>
+                          <div class="subTitle-box">
+                            <h3>한명씩 제시어에 대해 설명해주세요</h3>
+                          </div>
+                          <div class="btn-box">
+                            <button onclick="location.href = 'turn?turn=1'">Click Me</button>
+                          </div>`;
+        } else {
+          temp_html = `<div class="subTitle-box">
+                            <h2>1턴 돌았습니다</h2>
+                          </div>
+                          <div class="subTitle-box">
+                            <h3>한명씩 제시어에 대해 설명해주세요</h3>
+                          </div>
+                          <div class="btn-box">
+                            <button onclick="location.href = 'liarSelect'">Click Me</button>
+                          </div>`;
+        }
+        $(".turn-container").append(temp_html);
+      };
+    </script>
   </head>
   <body>
     <div class="turn-background">
-      <div class="turn-container">
-        <div class="subTitle-box">
-          <h2>O턴 돌았습니다</h2>
-        </div>
-        <div class="subTitle-box">
-          <h3>한명씩 제시어에 대해 설명해주세요</h3>
-        </div>
-        <div class="btn-box">
-          <button onclick="">Click Me</button>
-        </div>
-      </div>
+      <div class="turn-container"></div>
     </div>
   </body>
 </html>

@@ -6,7 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../static/css/reset.css" />
     <link rel="stylesheet" href="../../static/css/liarGame/dark.css" />
-    <title>Document</title>
+    <title>Liar Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      window.onload = function liarSelectPageShow() {
+        data = localStorage.getItem("selectLiar").split(",");
+        num = localStorage.getItem("num");
+        console.log(data[num], typeof num);
+        let temp_html = "";
+        if (data[num] === "0") {
+          temp_html = `<button onclick="location.href='notLiar'">Click Me</button>`;
+        } else {
+          temp_html = `<button onclick="location.href='liar'">Click Me</button>`;
+        }
+        $(".btn-box").append(temp_html);
+      };
+    </script>
   </head>
   <body>
     <div class="dark-background">
@@ -14,9 +29,7 @@
         <div class="subTitle-box">
           <h2>당신이 라이어인지 확인하세요</h2>
         </div>
-        <div class="btn-box">
-          <button onclick="">Click Me</button>
-        </div>
+        <div class="btn-box"></div>
       </div>
     </div>
   </body>

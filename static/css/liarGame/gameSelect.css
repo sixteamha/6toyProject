@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 .gameSelect-background {
-  background-image: url("../../img/mainBackground.png");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(to bottom, #333d51, #01031f);
 
   position: relative;
   width: 100%;

@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../static/css/reset.css" />
     <link rel="stylesheet" href="../../static/css/liarGame/main.css" />
-    <title>Document</title>
+    <title>Liar Game</title>
+    <script>
+      window.localStorage.setItem("numbers", [3, 4, 5, 6, 7]);
+      window.localStorage.setItem("kind", [
+        "과일",
+        "인물",
+        "동물",
+        "음료",
+        "직업",
+      ]);
+      window.localStorage.setItem("num", 0);
+    </script>
   </head>
   <body>
     <div class="main-background">
@@ -16,8 +27,10 @@
         </div>
         <div class="img1"><div class="img2"></div></div>
         <div class="btn-box">
-          <button onclick="location.href='exp.html'">설명서</button>
-          <button>Game Start</button>
+          <button onclick="location.href='exp'">설명서</button>
+          <button onclick="location.href='gameSelectc?hoice=num'">
+            Game Start
+          </button>
         </div>
       </div>
     </div>

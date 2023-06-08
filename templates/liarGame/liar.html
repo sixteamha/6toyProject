@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../static/css/reset.css" />
     <link rel="stylesheet" href="../../static/css/liarGame/liar.css" />
-    <title>Document</title>
+    <title>Liar Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      window.onload = function notLiarPageShow() {
+        num = Number(localStorage.getItem("num")) + 1;
+        console.log(num, typeof num);
+        selectLiar = localStorage.getItem("selectLiar").split(",");
+        window.localStorage.setItem("num", num);
+
+        if (num >= selectLiar.length) {
+          $(".btn-box").empty();
+          $(".btn-box").append(
+            `<button onclick="location.href = 'turn?turn=0'">Click Me</button>`
+          );
+        }
+      };
+    </script>
   </head>
   <body>
     <div class="liar-background">
@@ -20,7 +36,7 @@
           </div>
         </div>
         <div class="btn-box">
-          <button onclick="">Click Me</button>
+          <button onclick="location.href = 'dark'">Click Me</button>
         </div>
       </div>
     </div>

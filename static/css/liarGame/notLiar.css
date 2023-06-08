@@ -1,8 +1,5 @@
 .notLiar-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../img/mainBackground.png");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(to bottom, #333d51, #01031f);
 
   position: relative;
   width: 100vw;
@@ -111,6 +108,8 @@
 
   background-color: #fafafa;
   color: #000000;
+
+  z-index: 1;
 
   /* animation: jittery 4s infinite; */
 }

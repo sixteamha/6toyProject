@@ -1,8 +1,5 @@
 .liarSelect-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../../img/mainBackground.png");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(to bottom, #333d51, #01031f);
 
   position: relative;
   width: 100%;
