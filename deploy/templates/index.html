@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" type="text/css" />
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <title>6toyProject</title>
+    <script
+      src="https://kit.fontawesome.com/6ebec202f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../static/js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 폴더 영역 -->
+      <div class="folder" id="folder1" onclick="showModalEventHandler('game1')">
+        <div class="folder-card"></div>
+        <label for="folder-card">초성맞추기 게임</label>
+      </div>
+      <div class="folder" id="folder2" onclick="showModalEventHandler('game2')">
+        <div class="folder-card"></div>
+        <label for="folder-card">카드맞추기 게임</label>
+      </div>
+      <div class="folder" id="folder3" onclick="showModalEventHandler('game3')">
+        <div class="folder-card"></div>
+        <label for="folder-card">베라 게임</label>
+      </div>
+      <div class="folder" id="folder4" onclick="showModalEventHandler('game4')">
+        <div class="folder-card"></div>
+        <label for="folder-card">라이어 게임</label>
+      </div>
+
+      <!-- 모달창 디자인 -->
+      <div id="game1" class="modal hide">
+        <div class="top-box">
+          <span>초성맞추기 게임</span>
+          <span onclick="deleteModalEventHandler('game1')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/WordFindGame/main">app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game2" class="modal hide">
+        <div class="top-box">
+          <span>카트맞추기 게임</span>
+          <span onclick="deleteModalEventHandler('game2')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/CardFilpCame/start">app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game3" class="modal hide">
+        <div class="top-box">
+          <span>베라 게임</span>
+          <span onclick="deleteModalEventHandler('game3')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/baskin/main">app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div id="game4" class="modal hide">
+        <div class="top-box">
+          <span>라이어 게임</span>
+          <span onclick="deleteModalEventHandler('game4')">X</span>
+        </div>
+        <ul class="content-box">
+          <li><a href="/liarGame/main">app.py</a></li>
+          <li>templates</li>
+          <li>venv</li>
+          <li>server</li>
+        </ul>
+      </div>
+      <div class="satellites">
+        <figure
+          class="satellite"
+          style="--i: 0; top: 10px; --backgroundColor: yellow"
+        >
+          <img src="../static/img/javascript.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 40; top: 80px; --backgroundColor: blue"
+        >
+          <img src="../static/img/css3.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 80; top: 30px; --backgroundColor: red"
+        >
+          <img src="../static/img/html5.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 120; top: 40px; --backgroundColor: yellow"
+        >
+          <img src="../static/img/python.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 160; top: 60px; --backgroundColor: blue"
+        >
+          <img src="../static/img/css3.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 200; top: 30px; --backgroundColor: red"
+        >
+          <img src="../static/img/javascript.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 240; top: 70px; --backgroundColor: yellow"
+        >
+          <img src="../static/img/css3.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 280; top: 20px; --backgroundColor: blue"
+        >
+          <img src="../static/img/python.svg" />
+        </figure>
+        <figure
+          class="satellite"
+          style="--i: 320; top: 30px; --backgroundColor: red"
+        >
+          <img src="../static/img/javascript.svg" />
+        </figure>
+
+        <div
+          class="satellite"
+          style="--backgroundColor: #faf082"
+          id="sun"
+          style="animation: unset"
+        ></div>
+      </div>
+    </div>
+    <div class="footer">
+      <nav class="nav">
+        <div class="nav-link">
+          <button
+            onclick="document.location.href = 'https://github.com/sixteamha/6toyProject'"
+          >
+            About Us
+          </button>
+        </div>
+        <div class="nav-title">여기는 6조입니당!! ㅎㅎ</div>
+        <div class="nav-clock"></div>
+      </nav>
+    </div>
+  </body>
+</html>

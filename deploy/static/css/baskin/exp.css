@@ -1,0 +1,85 @@
+body>.howto-wrap {
+    max-width: 1920px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   }
+   .howto-wrap>.mo-btn{display:flex;justify-content: space-evenly;width:100%;height:5vh;}
+   .howto-wrap>.mo-btn>button{background:transparent;border:none;color:#ffffff;font-size:30px;}
+   .howto-wrap>.mo-btn>button i{font-size:25px;}
+    body>.howto-wrap>.howto{width:65%;height:45vh;margin-top:30px;}
+   .howto-wrap>.howto>h4{font-size:60px;border-bottom:1px solid #ffffff;padding-bottom:20px;color:#ffffff;   margin-bottom: 25px;}
+   .howto-wrap>.howto strong{color:#fca103;font-size:60px;}
+   .howto-wrap>.howto>p{font-size: 40px; color: #ffffff; margin-bottom: 15px; margin-top: 15px;}
+   .howto-wrap>.howto span{font-size:40px;font-weight:500;color:#fca103;}
+   .howto-wrap>.astro{width: 30%; height: 45vh; }
+   .howto-wrap>.astro img{width:100%;height:100%;}
+
+   @media screen and (max-width:400px){
+    body>.howto-wrap>.howto {width:83%;height:80%;margin-top:0;}
+     .howto-wrap>.howto>h4{font-size:37px;}
+     .howto-wrap>.howto strong{font-size:37px;}
+    .howto-wrap>.howto>p{font-size:20px;}
+   .howto-wrap>.howto>p {font-size: 16px;}
+    .howto-wrap>.howto span{font-size:20px;}
+     .howto-wrap>.astro{display:none;}
+   .howto-wrap>.mo-btn {
+     display: flex;
+     color: #ffffff;
+     font-size: 23px;
+     align-items: center;
+   justify-content: space-evenly;
+     width: 100%;
+     margin-top: 10px;
+     margin-bottom:10px;
+   }
+   .howto-wrap>.mo-btn>button{color:#ffffff;font-size:18px;justify-content: center;}
+   .howto-wrap>.mo-btn>button i {
+     margin-right: 5px; font-size:18px;
+   }
+   }
+   @media screen and (min-width:401px) and  (max-width:600px){
+    body>.howto-wrap>.howto {
+      width: 95%;
+      height: 80%;
+      margin-top: 30px;
+     }
+    
+     .howto-wrap>.howto>h4 {
+      font-size: 30px;
+     }
+    
+     .howto-wrap>.howto strong {
+      font-size: 35px;
+     }
+    
+     .howto-wrap>.howto>p {
+      font-size: 20px;
+     }
+     .howto-wrap>.howto>.ex {
+       font-size: 17px;
+     }
+    
+     .howto-wrap>.howto span {
+      font-size: 20px;
+     }
+    .howto-wrap>.astro {
+     display: block;width:100%;
+    }
+    .howto-wrap>.astro img{width:90%;height:90%;}
+   .howto-wrap>.mo-btn>button {
+     color: #ffffff;
+     font-size: 18px;
+     justify-content: center;
+     margin-top:20px;
+   }
+   
+   .howto-wrap>.mo-btn>button i {
+     margin-right: 5px;
+     font-size: 18px;
+   }
+   }

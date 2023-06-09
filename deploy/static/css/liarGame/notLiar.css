@@ -1,0 +1,186 @@
+.notLiar-background {
+  background: linear-gradient(to bottom, #333d51, #01031f);
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.notLiar-background .notLiar-container {
+  position: relative;
+  width: 550px;
+  height: 770px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../img/plants3.png");
+  background-position: center;
+  background-size: cover;
+}
+.notLiar-background .subTitle-box {
+  height: 5px;
+}
+.notLiar-background .subTitle-box > h2 {
+  color: white;
+  font-size: 35px;
+}
+.notLiar-background .content {
+  position: relative;
+  top: 120px;
+  right: 30px;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+
+  text-align: right;
+  z-index: 1;
+  height: 550px;
+}
+.notLiar-background .horse {
+  position: relative;
+
+  top: 20px;
+  right: -50px;
+  width: 50%;
+  height: 80px;
+
+  background-color: white;
+
+  font-size: 30px;
+
+  border-radius: 25px;
+
+  text-align: center;
+  line-height: 100px;
+
+  padding: 10px;
+
+  box-sizing: content-box;
+}
+.notLiar-background .horse-short {
+  position: relative;
+  background-color: transparent;
+
+  left: 48%;
+  top: 19px;
+
+  width: 0px;
+  height: 0px;
+
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+.notLiar-background .img2 {
+  width: 300px;
+}
+.notLiar-background .btn-box {
+  height: 165px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.notLiar-background button {
+  all: unset;
+  font-size: 40px;
+  margin-top: 3vh;
+
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+
+  background-color: #fafafa;
+  color: #000000;
+
+  z-index: 1;
+
+  /* animation: jittery 4s infinite; */
+}
+.notLiar-background .btn-box button:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@keyframes jittery {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+@keyframes ani {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
+@media (width<380px) {
+  .notLiar-background .notLiar-container {
+    position: relative;
+    width: 80%;
+    height: 550px;
+  }
+
+  .notLiar-background .subTitle-box > h2 {
+    color: white;
+    font-size: 25px;
+  }
+  .notLiar-background .content {
+    top: 20px;
+    right: -30px;
+  }
+  .notLiar-background .horse {
+    font-size: 25px;
+    top: 50px;
+  }
+  .notLiar-background .horse-short {
+    top: 45px;
+  }
+}

@@ -1,0 +1,141 @@
+/* 기본 환경 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+
+:root {
+  --baseColor: #333d51;
+  --baseFontColor: #fff;
+}
+/* 환경 설정 */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--baseColor); */
+  background: linear-gradient(to bottom, #333d51, #01031f);
+}
+
+* {
+  font-family: "Gugi", cursive;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  font-size: var(--headerFontSize);
+}
+
+.header > .title-box {
+  display: none;
+}
+
+.header > .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 0 18px;
+  box-sizing: border-box;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: #666;
+}
+
+.nav-link > a:hover,
+.nav-link > a:focus {
+  color: #fff;
+}
+
+/* main 영역 디자인 설계 */
+
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > .title-box {
+  margin: 10px 0 10px 0;
+  padding: 0;
+  color: var(--baseFontColor);
+  font-size: 2.2rem;
+  animation: ani 1s infinite alternate;
+}
+
+.container > .title-box > span {
+  color: #faf082;
+  font-size: 40px;
+}
+
+@keyframes ani {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 10px);
+  }
+}
+
+.container > .img-box {
+  width: 350px;
+  height: 350px;
+}
+
+/* form 디자인 설계 */
+
+#enter-form {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  line-height: 50px;
+}
+#enter-form > .input-box {
+  width: 270px;
+  display: flex;
+  justify-content: space-around;
+}
+#enter-form > .input-box > input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #333;
+  outline: 0;
+  padding: 15px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  background-color: #3b4148;
+  color: #fff;
+}
+
+#enter-form > .input-box > input[type="text"]:hover {
+  background-color: #434a52;
+}
+
+#enter-form > .input-box > #exp-btn {
+  color: yellowgreen;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  font-size: 2.2rem;
+  color: var(--baseFontColor);
+  border: none;
+  padding: 0;
+  margin-top: 30px;
+  /* animation: ani 1s infinite alternate; */
+}

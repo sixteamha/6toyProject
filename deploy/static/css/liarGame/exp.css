@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.exp-background {
+  background: linear-gradient(to bottom, #333d51, #01031f);
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.exp-background .exp-container {
+  position: relative;
+  width: 80vw;
+  height: 75vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-background .title-box {
+  height: 10vh;
+  margin-bottom: 60px;
+}
+
+.exp-background .title-box > h1 {
+  font-size: 8vh;
+  color: white;
+}
+
+.exp-background .content-box {
+  height: 55vh;
+  font-size: 2.5vw;
+  padding: 3vh 0;
+  color: #e6e6e6;
+  margin: 2.5vh 0;
+}
+.exp-background .content-box > ol > li {
+  list-style-type: decimal;
+  margin: 0 0 2.8vh 0;
+}
+
+.exp-background .btn-box {
+  height: 10vh;
+  justify-content: right;
+}
+
+.exp-background .btn-box > button {
+  all: unset;
+  font-size: 4vh;
+
+  position: absolute;
+  right: 0;
+  color: white;
+
+  padding: 10px;
+  text-shadow: 10px 10px 10px black;
+}
+
+.exp-background .btn-box > button:hover {
+  cursor: pointer;
+}
+
+@media (width<380px) {
+  .exp-background .title-box {
+    margin-bottom: 100px;
+  }
+
+  .exp-background .title-box > h1 {
+    font-size: 20px;
+  }
+}

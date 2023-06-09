@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Josefin+Sans&family=Noto+Sans+KR:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;
+font-family: 'Noto Sans KR', sans-serif;font-size:15px;list-style:none;text-decoration: none;}
+.color-bg {background: linear-gradient(to bottom, #333d51, #01031f);}
+body>.wrap{max-width: 1920px;height: 100vh;  margin: auto; display: flex;
+ flex-direction: column; align-items: center; justify-content: center;}
+ body>.wrap>.other-game{color:#ffffff;font-size:20px;display:flex;margin-top:30px;align-items:center;}
+ body>.wrap>.other-game i {
+   color: #ffffff;
+   font-size: 20px;
+ }
+.wrap>.baskin-main{width:100%; height:  85vh; display: flex; flex-direction: column; align-items: center ;justify-content: center;}
+.baskin-main>h1{height:10%;margin-top:10px;font-size:70px;color:#ffffff;}
+.baskin-main>.name>strong{color:#fca103;font-size:70px;}
+.baskin-main>p{color:#ffffff;margin-top:25px;font-size:30px;}
+.baskin-main>.astro{width:36%;height:79%;transform: translateX(20px) rotate(30deg) translateY(-53px);}
+.baskin-main>.astro>img{width: 100%;height:100%;}
+.animate__animated.animate__bounce {
+--animate-duration: 700ms;
+ --animate-delay: 2s
+}
+
+.wrap>.buttons{display:flex;}
+
+.wrap>.buttons>button{background:#fca103;color:#ffffff;border:#fca103;border-radius:10px;width:145px;height:70px;margin-bottom: 40px;font-size:30px; margin-right: 23px;cursor:pointer;}
+@media screen and (max-width:550px){
+    body>.wrap{width:100%;}
+    .wrap>.baskin-main{width:100vw;height:100vh;}
+   .baskin-main>h1{font-size:40px;}
+   .baskin-main>.name>strong{font-size:40px;}
+   .baskin-main>p{font-size:20px;margin-top:20px;}
+   .baskin-main>.astro{width:100%;height:54%;transform:none;rotate:10deg;}
+   .wrap>.buttons>button{width: 115px; height: 57px;font-size:20px;}
+   .wrap>.buttons{margin-left:20px;}
+   }

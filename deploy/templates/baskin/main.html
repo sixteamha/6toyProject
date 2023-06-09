@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>베스킨라빈스31</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../../static/css/baskin/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8b02d36c42.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrap color-bg">
+      <div class="other-game" onclick="location.href = '/'">
+        <i class="fa-solid fa-rotate-left"></i>다른 게임으로
+      </div>
+      <div class="baskin-main">
+        <h1 class="name">베스킨라빈스<strong>31</strong></h1>
+        <p>- 추억의 게임이 PC로 돌아왔다!</p>
+        <div class="astro">
+          <img
+            class="animate__animated animate__bounce"
+            src="{{url_for('static',filename = 'img/baskin5.png')}}"
+          />
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button" onclick="explain()">설명서</button>
+        <button class="button-sparta">참여하기</button>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector(".button-sparta")
+        .addEventListener("click", function () {
+          window.location.href='/baskin/firstPlayer'
+        });
+    </script>
+    <script src="../../static/js/baskin/main.js"></script>
+  </body>
+</html>

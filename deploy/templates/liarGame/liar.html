@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/reset.css" />
+    <link rel="stylesheet" href="../../static/css/liarGame/liar.css" />
+    <title>6toyProject | 라이어 게임</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      window.onload = function notLiarPageShow() {
+        num = Number(localStorage.getItem("num")) + 1;
+        console.log(num, typeof num);
+        selectLiar = localStorage.getItem("selectLiar").split(",");
+        window.localStorage.setItem("num", num);
+
+        if (num >= selectLiar.length) {
+          $(".btn-box").empty();
+          $(".btn-box").append(
+            `<button onclick="location.href = 'turn?turn=0'">Click Me</button>`
+          );
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="liar-background">
+      <div class="liar-container">
+        <div class="subTitle-box">
+          <h2>당신은 라이어가 맞습니다</h2>
+        </div>
+        <div class="content">
+          <div class="img1">
+            <div class="img2"></div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button onclick="location.href = 'dark'">Click Me</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-size: 15px;
+ list-style: none;
+ text-decoration: none;
+}
+
+/* 게임 실패 글씨 */
+.failwrap {
+ max-width: 1920px;
+ height: 100vh;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background: linear-gradient(to bottom, #333d51, #01031f);
+}
+
+.failwrap>.fails {
+ color: #ffffff;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ align-items: center;
+}
+.failwrap>.fails>.fail>.failuser {
+ color: #fca903;
+ font-size:30px;
+ font-weight:600;
+ margin-top:10px;
+}
+
+.failwrap>.fails>.fail>p{font-size:20px;}
+.failwrap>.fails>.fail>h4 {
+ font-size: 30px;
+}
+
+
+/* 게임 실패 행성 이미지 */
+.failwrap>.fails .astro {
+ width: 55vw;
+ height: 60vh;
+}
+
+.failwrap>.fails .astro img {
+ width: 100%;
+ height: 100%;
+}
+
+/* 게임 돌아가기 버튼 */
+.failwrap>.reset>button{background-color:#fca903;color:#ffffff;font-size: 28px;
+ width: 150px; height: 65px; border: 2px solid #fca903; border-radius: 20px;font-weight:600;}
+
+ @media screen and (max-width:550px) {
+    .failwrap>.fails .astro {
+      width: 60vw;
+      height: 45vh;
+     }
+     .failwrap>.fails>.fail>h4{
+       font-size: 28px; margin-right: 10px;
+       margin-top: 10px;
+     }
+   }

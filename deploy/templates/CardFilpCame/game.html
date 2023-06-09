@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename = 'css/CardFilpCame/game.css')}}"
+      type="text/css"
+    />
+    <title>6toyProject | 카드맞추기 게임</title>
+  </head>
+  <body>
+    <header id="header-menu">
+      <button id="back-Button">뒤로가기</button>
+      <button id="allFlip-Button">뒤집기</button>
+      <button id="retry-Button">다시하기</button>
+    </header>
+    <div id="cards-container"></div>
+    <div id="players-container">
+      <div id="players-Text">
+        <span>플레이어1</span>
+        의 차례입니다
+      </div>
+    </div>
+    <div id="players-winlose-container">
+      <div id="players-success-container">
+        <div id="players-success">Winner</div>
+      </div>
+      <div id="players-loser-container">
+        <div id="players-Loser">Loser</div>
+      </div>
+    </div>
+  </body>
+  <script src="../../static/js/CardFilpCame/game.js"></script>
+</html>
