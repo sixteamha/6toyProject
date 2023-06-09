@@ -2,7 +2,9 @@ from flask import Flask
 from server import server
 import os
 import dotenv
+import certifi
 
+ca = certifi.where()
 dotenv.load_dotenv()
 app = Flask(__name__)
 
