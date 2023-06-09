@@ -197,7 +197,6 @@ const cardexample = () => {
   document.getElementById("cards-container").replaceChildren();
   for (let i = 0; i < CardsCount; i++) {
     let cardItem = document.createElement("div");
-
     cardItem.className = "card-box";
     cardItem.innerHTML = `
           <div id="card">
