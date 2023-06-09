@@ -1,0 +1,264 @@
+/* 기본 환경 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+:root {
+  --baseColor: #333d51;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--baseColor); */
+  background: linear-gradient(to bottom, #333d51, #01031f);
+}
+
+:root {
+  --headerColor: #666;
+  --headerFontSize: 1rem;
+}
+
+* {
+  font-family: "Gugi", cursive;
+}
+/* gnb 영역 디자인 */
+
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  font-size: var(--headerFontSize);
+}
+
+.header > .title-box {
+  display: none;
+}
+
+.header > .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 0 18px;
+  box-sizing: border-box;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: var(--headerColor);
+}
+
+.nav-link > a:hover,
+.nav-link > a:focus {
+  color: #fff;
+}
+
+:root {
+  --baseFontSize: 1.2rem;
+}
+
+/* main 영역 디자인 설계 */
+
+.container {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  place-items: center;
+  font-size: 3.4rem;
+}
+
+.letter-form > .letters {
+  margin: 20px 0 20px 0;
+  padding: 0;
+}
+
+.letter-form > .send-box {
+  padding: 0;
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.letter-form > .send-box > #send-form {
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #3b4148;
+}
+.letter-form > .send-box > #send-form:hover {
+  background-color: #434a52;
+}
+.letter-form > .send-box > #send-form > #letter {
+  width: 230px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-size: var(--baseFontSize);
+  background-color: transparent;
+  color: #fff;
+}
+.letter-form > .send-box > #send-form > #submit-btn {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: var(--baseFontSize);
+}
+input[type="submit"] {
+  font-family: FontAwesome;
+  color: #777;
+}
+
+.container > .letter-form > .letters {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.letter-form > .letters > span {
+  height: 80px;
+  position: relative;
+  background: #ffff;
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+
+.letter-form > .letters > span:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #fff;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-right: -20px;
+}
+.container > .letter-form > .letters > .img-box {
+  width: 150px;
+  height: 150px;
+}
+.container > .letter-form > .letters > .img-box > img {
+  width: 100%;
+  height: 100%;
+}
+.container > .people-life > .sun {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #faf082;
+}
+.container > .people-life > .moon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+}
+.container > .people-life > .earth {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0067a3;
+  position: absolute;
+}
+.container > .people-life > .mars {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: brown;
+  position: absolute;
+}
+
+.hide {
+  opacity: 0;
+}
+
+/* 데스크탑 용 디자인  */
+@media screen and (min-width: 1025px) {
+  .header {
+    height: 100px;
+    font-size: 60px;
+    color: #fff;
+    animation: ani 1s infinite alternate;
+  }
+  .header > .title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header > .title-box > span {
+    color: #faf082;
+    font-size: 70px;
+  }
+  @keyframes ani {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 10px);
+    }
+  }
+  .header > .nav {
+    display: none;
+  }
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .container > .letter-form > .letters > .img-box {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../img/우주인8.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .letter-form > .send-box > #send-form {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #3b4148;
+  }
+  .letter-form > .send-box > #send-form > #letter {
+    width: 350px;
+  }
+}
+/* 에러 화면 디자인 설계 */
+.error-box {
+  position: absolute;
+  top: 25%;
+  padding: 20px;
+  margin: 0;
+  border: 2px solid #333;
+  background-color: #3b4148;
+  border-radius: 20px;
+  display: none;
+}
+.error-box > h6 {
+  margin: 0;
+  color: #fff;
+}
+.error-box > img {
+  width: 200px;
+  height: 200px;
+}

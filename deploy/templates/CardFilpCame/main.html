@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6toyProject | 카드맞추기 게임</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../static/css/CardFilpCame/index.css" />
+    <script
+      src="https://kit.fontawesome.com/2bf48a0102.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="setting-container">
+        <div id="container">
+          <div id="cards-container"></div>
+        </div>
+        <div class="setting-cards-container">
+          <div>
+            <button onclick='count("minus" ,"card")' value="+">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div>
+            <div id="result-card">12</div>
+          </div>
+          <div>
+            <button type="button" onclick='count("plus","card")' value="-">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div id="card-select-div">
+          <span>카드 개수</span>
+        </div>
+        <div class="setting-people-container">
+          <button onclick='count("minus", "person")' value="+">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div id="result-person">4</div>
+          <button type="button" onclick='count("plus", "person")' value="-">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <div id="card-select-div">
+          <span>인원수</span>
+        </div>
+        <div id="startGame-submit">
+          <button id="game-back-btn" type="submit">뒤로가기</button>
+          <button id="game-start-btn" type="submit">시작</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../static/js/CardFilpCame/main.js"></script>
+  </body>
+</html>

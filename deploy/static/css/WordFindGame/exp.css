@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+:root {
+  --baseColor: #333d51;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--baseColor);
+}
+
+:root {
+  --headerColor: #666;
+  --headerFontSize: 1rem;
+}
+
+* {
+  font-family: "Gugi", cursive;
+}
+/* gnb 영역 디자인 */
+
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  font-size: var(--headerFontSize);
+}
+
+.header > .title-box {
+  display: none;
+}
+
+.header > .nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px 0 18px;
+  box-sizing: border-box;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: var(--headerColor);
+}
+
+.nav-link > a:hover,
+.nav-link > a:focus {
+  color: #fff;
+}
+
+/* main 영역 디자인 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#exp-form {
+  text-align: center;
+  color: #fff;
+  border: 2px solid #333;
+  padding: 15px;
+  margin: 0;
+  background-color: #3b4148;
+}
+
+#exp-form > p {
+  font-size: 1rem;
+}
+
+#exp-form > p > span {
+  font-size: 1.2rem;
+  color: #faf082;
+}
+
+@media screen and (min-width: 1025px) {
+  #exp-form > p {
+    font-size: 1.8rem;
+  }
+  #exp-form > p > span {
+    font-size: 2.2rem;
+  }
+}

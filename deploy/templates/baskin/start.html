@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/baskin/style.css" />
+    <link rel="stylesheet" href="../../static/css/baskin/start.css" />
+    <script
+      src="https://kit.fontawesome.com/8b02d36c42.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Game start</title>
+  </head>
+  <body>
+    <div class="start-wrap color-bg">
+      <div class="mo-btn">
+        <button type="button" onclick="main()"
+          ><i class="fa-solid fa-rotate-left"></i>메인으로</button>
+        <button type="button" onclick="fail()"><i class="fa-solid fa-rotate-right"></i>다음으로</button>
+      </div>
+      <div class="start-name">
+        <em>베스킨라빈스 31~ 귀엽고 깜찍하게 31</em>
+        <h4>게임 스타트!</h4>
+      </div>
+      <div class="astro">
+        <img src="{{url_for('static',filename = 'img/baskin4.png')}}" alt="" />
+      </div>
+      <div class="number-choice">
+        <p class="mobile">숫자를 입력하세요</p>
+        <p class="pc">버튼을 클릭하세요</p>
+        <div class="number-button">
+          <input type="radio" value="1" name="count" id="count">
+          <input type="radio" value="2" name="count" id="count">
+          <input type="radio" value="3" name="count" id="count">
+        </div>
+        <div class="buttons">
+          <button type="button" onclick="explain()">설명서</button>
+          <button type="submit" class="submit" onclick="countcheck()">
+            제출
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="start.js"></script>  -->
+    <script>
+      let member = localStorage.getItem("member");
+      
+      let members;
+      let score = parseInt(localStorage.getItem("num"));
+      let maxnum = localStorage.getItem("maxnum");
+      function countplus() {
+        score++;
+      }
+
+
+      function Player(name) {
+        this.name = name;
+        this.turn = false;
+      }
+      members = [];
+      for (let i = 0; i < member; i++) {
+        members = [...members, new Player(`${i + 1}번 플레이어`)];
+      }
+
+      if (members.length > 0) {
+        members[0].turn = true;
+      }
+
+
+      function countcheck() {
+       let [nowCount]= document.querySelectorAll('input[name="count"]:checked')
+      //  console.log(nowCount.value)
+      score=score+parseInt(nowCount.value);
+       let currentMemberIndex= members.findIndex((mem)=>
+          mem.turn=== true
+        )
+        console.log(currentMemberIndex)
+        let currentMember=members[currentMemberIndex]
+        if (maxnum <= score) {
+          let url="/baskin/end?loser="+encodeURIComponent(currentMember.name)
+          return window.location.href=url
+        } else {
+          //gameover창으로 이동
+        }
+        
+        console.log(currentMember)
+        console.log(score)
+
+
+       
+        currentMember.turn=false
+        nextMemberIndex=(currentMemberIndex+1)%members.length
+        let nextMember = members[nextMemberIndex] 
+        nextMember.turn=true
+        console.log(members)
+      }
+    </script>
+    <script src="../main/main.js"></script>
+  </body>
+</html>

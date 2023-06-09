@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../static/css/WordFindGame/main.css"
+      type="text/css"
+    />
+    <title>6toyProject | 초성맞추기 게임</title>
+    <script
+      defer
+      type="text/javascript"
+      src="../../static/js/WordFindGame/main.js"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="nav">
+        <div class="nav-link"><a href="/WordFindGame/main">이전</a></div>
+        <div class="nav-link"><a href="/">홈</a></div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="title-box">초성 맞추기<span>게임</span></div>
+      <div class="img-box"><img src="{{url_for('static',filename = 'img/man12.png')}}" /></div>
+      <form id="enter-form">
+        <div class="input-box">
+          <input
+            type="text"
+            id="letter"
+            name="letter"
+            placeholder="난이도 (2 ~ 4)"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input-box">
+          <input type="submit" id="enter-btn" value="입장하기" />
+          <input type="submit" id="exp-btn" value="설명서" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

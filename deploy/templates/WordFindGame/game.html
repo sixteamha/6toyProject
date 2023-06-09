@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../static/css/WordFindGame/game.css"
+      type="text/css"
+    />
+    <title>6toyProject | 초성맞추기 게임</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/6ebec202f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../../static/js/WordFindGame/game.js"></script>
+    <script defer src="../../static/js/WordFindGame/animate.js"></script>
+    <script>
+      var time = 10;
+      var sec = "";
+      setInterval(() => {
+        sec = time % 60;
+        document.getElementById("time-box").innerHTML = sec + "초";
+        time--;
+        if (time === 5) document.getElementById("time-box").style.color = "red";
+        if (time >= 7) document.getElementById("time-box").style.color = "#000";
+        if (time === 0) return showGameOverEventHandler();
+
+        // update time to LocalStorage
+        localStorage.setItem("time", time);
+      }, 1000);
+
+      function setTimer() {
+        //reset timer to 5sec in LocalStorage
+        time = 10;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="nav">
+        <div class="nav-link"><a href="/WordFindGame/main">이전</a></div>
+        <div class="nav-link"><a href="/">홈</a></div>
+      </nav>
+      <div class="title-box">초성 맞추기 <span>게임</span></div>
+    </div>
+    <div class="container">
+      <div id="time-box"></div>
+      <div class="letter-form">
+        <div class="letters">
+          <span id="letter-title"></span>
+          <div class="img-box"><img src= "{{url_for('static',filename = 'img/man8.png')}}"/></div>
+        </div>
+        <div class="send-box">
+          <form id="send-form">
+            <input
+              type="text"
+              id="letter"
+              name="letter"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="submit"
+              id="submit-btn"
+              value="&#xf002;"
+              onclick="setTimer()"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="people-life">
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="earth"></div>
+        <div class="mars"></div>
+      </div>
+      <div class="error-box" onclick="location.href = '/WordFindGame/main'">
+        <h6>Game Over</h6>
+        <img src="{{url_for('static',filename = 'img/man11.png')}}" />
+      </div>
+    </div>
+  </body>
+</html>

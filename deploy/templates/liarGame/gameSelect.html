@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/css/reset.css" />
+    <link rel="stylesheet" href="../../static/css/liarGame/gameSelect.css" />
+    <title>6toyProject | 라이어 게임</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function clickBtn(btnValue) {
+        const URLSearch = new URLSearchParams(location.search).get("choice");
+        if (URLSearch === "num") {
+          let array = Array(Number(btnValue)).fill(0);
+          array[Math.floor(Math.random() * btnValue)] = 1;
+          window.localStorage.setItem("selectLiar", array);
+
+          location.href = `gameSelect?choice=kind`;
+        } else {
+          fetch("/liarGame/api/answer")
+            .then((res) => res.json())
+            .then((data) => {
+              let answer =
+                data["data"][0][btnValue][Math.floor(Math.random() * 10)];
+              window.localStorage.setItem("answer", answer);
+            });
+
+          location.href = `dark`;
+        }
+      }
+
+      window.onload = function selectPageShow() {
+        const URLSearch = new URLSearchParams(location.search).get("choice");
+        let data = null;
+        if (URLSearch === "num") {
+          data = localStorage.getItem("numbers").split(",");
+        } else {
+          data = localStorage.getItem("kind").split(",");
+        }
+
+        let temp_html = `<div class="btnDiv-box">
+                            <button value=${data[0]} class="btn0" onclick="clickBtn(this.value)">${data[0]}</button>
+                            <button value=${data[1]} class="btn1" onclick="clickBtn(this.value)">${data[1]}</button>
+                          </div>
+                          <div class="subTitle-box">
+                            <h2>선택해주세요</h2>
+                          </div>
+                          <div class="btnDiv-box2">
+                            <button value=${data[2]} class="btn2" onclick="clickBtn(this.value)">${data[2]}</button>
+                            <button value=${data[3]} class="btn3" onclick="clickBtn(this.value)">${data[3]}</button>
+                            <button value=${data[4]} class="btn4" onclick="clickBtn(this.value)">${data[4]}</button>
+                          </div>`;
+
+        $(".gameSelect-container").append(temp_html);
+      };
+    </script>
+  </head>
+  <body>
+    <div class="gameSelect-background">
+      <div class="gameSelect-container"></div>
+    </div>
+  </body>
+</html>
