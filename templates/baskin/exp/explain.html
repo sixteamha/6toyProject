@@ -16,15 +16,17 @@
   <body>
     <div class="howto-wrap color-bg">
       <div class="mo-btn">
-        <button><i class="fa-solid fa-rotate-left">메인으로</i></button>
-        <button><i class="fa-solid fa-rotate-right">다음으로</i></button>
+        <button type="button" onclick="main()"><i class="fa-solid fa-rotate-left">메인으로</i></button>
+        <button type="button"onclick="start()"><i class="fa-solid fa-rotate-right">다음으로</i></button>
       </div>
       <div class="howto">
         <h4>How to PC 베스킨라빈스<strong> 31</strong></h4>
         <p>1. 첫 플레이어의 경우 : <span>인원수</span>를 선택하세요</p>
         <p>2. 첫 플레이어의 경우 : <span>마지막 숫자</span>를 정해주세요</p>
-        <p>3. 최대 <span>3개</span>의 숫자를 클릭해주세요</p>
-        <p>4. <span>같은 숫자, 마지막 숫자</span>를 말하면 탈락합니다.</p>
+        <p>3.버튼 3개중 하나를 클릭해주세요.</p>
+        <p>4. 각 버튼을 누르면 클릭하여 누적된 숫자에 <span>누른 버튼 위치만큼</span> 숫자가 누적됩니다.</p>
+        <p class="ex">예:첫 플레이어가 왼쪽버튼을 누르면 1만큼 더해짐.두번째 플레이어가 가운데 버튼을 누르면 1+2가 되어 3이 됩니다.</p>
+        <p>5.<span>정해진 숫자</span>를 넘은 숫자를 클릭하면 탈락합니다.</p>
       </div>
       <div class="astro">
         <img
@@ -33,5 +35,11 @@
         />
       </div>
     </div>
+    <script src="../main/main.js"></script>
+    <script>
+      function start(){
+        location.href="../gamestart/start.html"
+      }
+    </script>
   </body>
 </html>

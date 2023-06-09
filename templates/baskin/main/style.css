@@ -4,14 +4,17 @@
  .color-bg {background: linear-gradient(to bottom, #333d51, #01031f);}
  body>.wrap{max-width: 1920px;height: 100vh;  margin: auto; display: flex;
   flex-direction: column; align-items: center; justify-content: center;}
-.wrap>.baskin-main{width:100%; height: 80%;
- display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
+  body>.wrap>.other-game{color:#ffffff;font-size:20px;display:flex;margin-top:30px;align-items:center;}
+  body>.wrap>.other-game i {
+    color: #ffffff;
+    font-size: 20px;
+  }
+ .wrap>.baskin-main{width:100%; height:  85vh; display: flex; flex-direction: column; align-items: center ;justify-content: center;}
 .baskin-main>h1{height:10%;margin-top:10px;font-size:70px;color:#ffffff;}
 .baskin-main>.name>strong{color:#fca103;font-size:70px;}
 .baskin-main>p{color:#ffffff;margin-top:25px;font-size:30px;}
-.baskin-main>.astro{transform: translateX(20px) rotate(30deg) translateY(5px);}
-.baskin-main>.astro>img{width: 100%;height:100%;background:url(../baskin/main/Pngtree\ astronaut-1-none.png)no-repeat;background-size:cover}
+.baskin-main>.astro{width:36%;height:79%;transform: translateX(20px) rotate(30deg) translateY(-53px);}
+.baskin-main>.astro>img{width: 100%;height:100%;}
 .animate__animated.animate__bounce {
  --animate-duration: 700ms;
   --animate-delay: 2s

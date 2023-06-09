@@ -2,8 +2,9 @@
  body>.howto-wrap>.howto {width:83%;height:80%;margin-top:0;}
   .howto-wrap>.howto>h4{font-size:37px;}
   .howto-wrap>.howto strong{font-size:37px;}
- .howto-wrap>.howto>p{font-size:23px;}
- .howto-wrap>.howto span{font-size:23px;}
+ .howto-wrap>.howto>p{font-size:20px;}
+.howto-wrap>.howto>p {font-size: 16px;}
+ .howto-wrap>.howto span{font-size:20px;}
   .howto-wrap>.astro{display:none;}
 .howto-wrap>.mo-btn {
   display: flex;
@@ -22,13 +23,13 @@ justify-content: space-evenly;
 }
 @media screen and (min-width:401px) and  (max-width:600px){
  body>.howto-wrap>.howto {
-   width: 75%;
+   width: 95%;
    height: 80%;
    margin-top: 30px;
   }
  
   .howto-wrap>.howto>h4 {
-   font-size: 35px;
+   font-size: 30px;
   }
  
   .howto-wrap>.howto strong {
@@ -36,11 +37,14 @@ justify-content: space-evenly;
   }
  
   .howto-wrap>.howto>p {
-   font-size: 25px;
+   font-size: 20px;
+  }
+  .howto-wrap>.howto>.ex {
+    font-size: 17px;
   }
  
   .howto-wrap>.howto span {
-   font-size: 25px;
+   font-size: 20px;
   }
  .howto-wrap>.astro {
   display: block;width:100%;

@@ -16,12 +16,9 @@
   <body>
     <div class="start-wrap color-bg">
       <div class="mo-btn">
-        <a href="../main/main.html"
-          ><i class="fa-solid fa-rotate-left"></i>메인으로</a
-        >
-        <a href="../main/main.html"
-          ><i class="fa-solid fa-rotate-right"></i>다음으로</a
-        >
+        <button type="button" onclick="main()"
+          ><i class="fa-solid fa-rotate-left"></i>메인으로</button>
+        <button type="button" onclick="fail()"><i class="fa-solid fa-rotate-right"></i>다음으로</button>
       </div>
       <div class="start-name">
         <em>베스킨라빈스 31~ 귀엽고 깜찍하게 31</em>
@@ -30,17 +27,16 @@
       <div class="astro">
         <img src="gamestart-white-none.png" alt="" />
       </div>
-      <div class="last">20</div>
       <div class="number-choice">
         <p class="mobile">숫자를 입력하세요</p>
-        <p class="pc">숫자를 클릭하세요</p>
+        <p class="pc">버튼을 클릭하세요</p>
         <div class="number-button">
-          <input type="radio" value="1" name="count" id="count"></input>
-          <input type="radio" value="2" name="count" id="count"></input>
-          <input type="radio" value="3" name="count" id="count"></input>
+          <input type="radio" value="1" name="count" id="count">
+          <input type="radio" value="2" name="count" id="count">
+          <input type="radio" value="3" name="count" id="count">
         </div>
         <div class="buttons">
-          <a href="../exp/explanation.html">설명서</a>
+          <button type="button" onclick="explain()">설명서</button>
           <button type="submit" class="submit" onclick="countcheck()">
             제출
           </button>
@@ -100,10 +96,7 @@
         nextMember.turn=true
         console.log(members)
       }
-
-
-  
-   
     </script>
+    <script src="../main/main.js"></script>
   </body>
 </html>

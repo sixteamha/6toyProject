@@ -1,8 +1,10 @@
 @media screen and (max-width:550px){
+ body>.wrap{width:100%;}
+ .wrap>.baskin-main{width:100vw;height:100vh;}
 .baskin-main>h1{font-size:40px;}
 .baskin-main>.name>strong{font-size:40px;}
 .baskin-main>p{font-size:20px;margin-top:20px;}
-.baskin-main>.astro{transform:translateX(0)rotate(30deg) translateY(5px);}
+.baskin-main>.astro{width:100%;height:54%;transform:none;rotate:10deg;}
 .wrap>.buttons>button{width: 115px; height: 57px;font-size:20px;}
 .wrap>.buttons{margin-left:20px;}
 }

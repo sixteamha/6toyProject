@@ -31,6 +31,12 @@
  text-align: center;
  align-items: center;
 }
+.failwrap>.fails>.fail>.failuser {
+ color: #fca903;
+ font-size:30px;
+ font-weight:600;
+ margin-top:10px;
+}
 
 .failwrap>.fails>.fail>p{font-size:20px;}
 .failwrap>.fails>.fail>h4 {

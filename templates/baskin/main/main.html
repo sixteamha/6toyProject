@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>베스킨라빈스31</title>
-    <script src="index.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -19,6 +18,9 @@
   </head>
   <body>
     <div class="wrap color-bg">
+      <div class="other-game">
+        <i class="fa-solid fa-rotate-left"></i>다른 게임으로
+      </div>
       <div class="baskin-main">
         <h1 class="name">베스킨라빈스<strong>31</strong></h1>
         <p>- 추억의 게임이 PC로 돌아왔다!</p>
@@ -30,7 +32,7 @@
         </div>
       </div>
       <div class="buttons">
-        <button class="button">설명서</button>
+        <button class="button" onclick="explain()">설명서</button>
         <button class="button-sparta">참여하기</button>
       </div>
     </div>
@@ -41,5 +43,6 @@
           window.location.href='../firstplayer/firstplayer.html'
         });
     </script>
+    <script src="main.js"></script>
   </body>
 </html>
